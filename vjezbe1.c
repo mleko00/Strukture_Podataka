@@ -1,3 +1,12 @@
+/* Napisati program koji prvo pročita koliko redaka ima datoteka, 
+tj. koliko ima studenata zapisanih u datoteci. 
+Nakon toga potrebno je dinamički alocirati prostor za niz struktura studenata 
+(ime, prezime, bodovi) i učitati iz datoteke sve zapise. 
+Na ekran ispisati ime, prezime, apsolutni i relativni broj bodova.
+Napomena: Svaki redak datoteke sadrži ime i prezime studenta, 
+te broj bodova na kolokviju. relatvan_br_bodova = br_bodova/max_br_bodova*100
+*/
+
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
@@ -23,7 +32,7 @@ typedef struct _Student {
 	int bodovi;             
 
 	//Position next;                   //kasnije ce trebat
-    
+
 } Stud;
 
 //obavezno deklarirati funkciju prije maina, tek kasnije definirati
@@ -126,7 +135,7 @@ int procitajBrojRedaka()
 	}
 
 	/* petlja koja se izvsava dok ne stigne do kraja datoteke
-        fgets zahvati cijelu liniju, ako postoji
+        fgets zahvati cijelu liniju, ako postoji,
         brojac se inkrementira */
 
 	while (!feof(fp)) {
