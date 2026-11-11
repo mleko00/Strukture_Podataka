@@ -56,7 +56,7 @@ int readFromFile(Position head) {
 
 	fp = fopen(fileName, "r");
 	if (!fp) {
-		perror("Datoteka se ne moze otvoriti");
+		printf("Datoteka se ne moze otvoriti");
 		return ERROR_FILE;
 	}
 
